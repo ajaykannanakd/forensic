@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Forensics Training Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap">
+<header>
+ <div class="brand"><div class="seal">DFL</div><div><h1>Digital Forensics Training Lab</h1><p class="tag-line">Practice recovery &amp; timeline reconstruction on simulated case data</p></div></div>
+ <div><div class="who" id="who">trainee practice mode</div>
+ <nav class="levels"><button class="lv on" data-l="easy">Easy<small>Undelete &amp; reveal</small></button><button class="lv m" data-l="moderate">Moderate<small>Fragments &amp; decoys</small></button><button class="lv i" data-l="impossible">Impossible<small>Anti-forensics</small></button></nav>
+ <div class="lock" id="lock"></div></div>
+</header>
+<div class="brief" id="brief"></div>
+<div class="prog"><span id="pl">0 / 0</span><div class="bar"><i id="pf"></i></div><span id="ph"></span></div>
+<div class="grid">
+ <div class="panel"><div class="ph"><h3>Evidence Manifest</h3><label class="chk"><input type="checkbox" id="sh"> show hidden entries</label></div>
+  <div class="pb"><div class="scroll"><table><thead><tr><th></th><th>Filename</th><th>Status</th><th>Timestamp</th><th>Evidence?</th></tr></thead><tbody id="mb"></tbody></table></div>
+  <p class="hint">Click a row to inspect it. Deleted files keep recoverable content. Not every deleted or hidden file is relevant.</p></div></div>
+ <div class="col">
+  <div class="panel"><div class="ph"><h3>Inspector</h3></div><div class="pb" id="ins"></div></div>
+  <div class="panel"><div class="ph"><h3>Timeline Reconstruction</h3></div><div class="pb">
+   <p class="hint" style="margin:0">Give each event a position from 1 (earliest) to last.</p><div class="tl" id="tl"></div>
+   <textarea id="nt" placeholder="Case notes (optional) — write your reasoning before submitting…"></textarea>
+   <button class="btn pri wide" id="sub">Submit findings</button></div></div>
+  <div class="panel" id="sp" style="display:none"><div class="ph"><h3>Findings Report</h3></div><div class="pb" id="sc"></div></div>
+ </div>
+</div></div>
+<script src="script.js"></script></body></html>
